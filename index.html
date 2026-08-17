@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#172218" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Strong Again</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">YOUR TRAINING SPACE</p>
+        <h1>Strong Again</h1>
+        <p id="today-label" class="subtle"></p>
+      </header>
+      <section class="hero" aria-labelledby="next-title">
+        <p class="eyebrow">NEXT SESSION</p>
+        <h2 id="next-title"></h2>
+        <p id="next-summary"></p>
+        <button id="start-workout">Start workout</button>
+      </section>
+      <section aria-labelledby="week-title">
+        <div class="section-heading"><h2 id="week-title">Your six-day split</h2><button id="reset-data" class="text-button">Reset logs</button></div>
+        <div id="day-list" class="day-list"></div>
+      </section>
+      <section class="backup" aria-label="Backup tools">
+        <button id="export-data" class="secondary">Export backup</button>
+        <label class="secondary file-label">Import backup<input id="import-data" type="file" accept="application/json" /></label>
+      </section>
+    </main>
+    <dialog id="workout-dialog"><article><button id="close-dialog" class="close" aria-label="Close">×</button><div id="workout-content"></div></article></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
