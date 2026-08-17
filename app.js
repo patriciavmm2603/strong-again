@@ -1,0 +1,1 @@
+const files=['plan.js','app-data.js','app-ui.js']; let i=0; const next=()=>{if(i===files.length)return; const s=document.createElement('script'); s.src=files[i++]; s.onload=next; document.body.appendChild(s);}; next();
